@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Tarayıcı</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/webscanner.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Web Tarayıcı</div>
+        <div class="nav-links"></div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Hedef</h2>
+            <div class="input-group">
+                <label>URL</label>
+                <input id="targetUrl" type="text" placeholder="örn: https://example.com">
+            </div>
+            <div class="ws-actions">
+                <button id="scanBtn" class="btn btn-primary">Taramayı Başlat</button>
+                <label class="opt">
+                    <input id="deepScan" type="checkbox"> Derin tarama (yavaş olabilir)
+                </label>
+                <span id="scanStatus" class="status">Hazır</span>
+            </div>
+        </div>
+
+        <div class="ws-grid">
+            <div class="card">
+                <h3>Özet</h3>
+                <div id="summary"></div>
+            </div>
+            <div class="card">
+                <div class="section-header">
+                    <h3>HTTP Başlıkları <span id="headersSize" class="muted"></span></h3>
+                    <button id="toggleHeaders" class="btn btn-ghost" aria-expanded="false">Detayları Göster</button>
+                </div>
+                <pre id="headers" class="pre collapsed"></pre>
+            </div>
+            <div class="card">
+                <h3>Admin Panel Adayları</h3>
+                <ul id="adminCandidates" class="list"></ul>
+            </div>
+            <div class="card">
+                <div class="section-header">
+                    <h3>robots.txt <span id="robotsSize" class="muted"></span></h3>
+                    <button id="toggleRobots" class="btn btn-ghost" aria-expanded="false">Detayları Göster</button>
+                </div>
+                <pre id="robots" class="pre collapsed"></pre>
+            </div>
+            <div class="card">
+                <h3>Güvenlik Kontrolleri</h3>
+                <ul id="securityChecks" class="list"></ul>
+            </div>
+            <div class="card">
+                <h3>Sunucu Özeti</h3>
+                <table class="table">
+                    <tbody id="serverSummary">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/css/aichat.css">
+    <script src="/js/navbar.js"></script>
+    <script src="/js/webscanner.js"></script>
+    <script src="/js/aichat.js"></script>
+</body>
+</html>
